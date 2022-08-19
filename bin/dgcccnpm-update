@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const debug = require('debug')('dgcccnpm:update');
+const path = require('path');
+const { fork } = require('child_process');
+const { rmSync } = require('fs');
+
+const cwd = process.cwd();
+const dgcccnpmCli = path.join(__dirname, 'dgcccnpm');
+const options = {
+  stdio: 'inherit',
+};
+
+const nodeModulesDir = path.join(cwd, 'node_modules');
+console.log('[dgcccnpm:update] Removing %s', nodeModulesDir);
+rmSync(nodeModulesDir, { force: true, recursive: true });
+
+console.log('[dgcccnpm:update] Running "dgcccnpm install" on %s', cwd);
+fork(dgcccnpmCli, [ 'install' ], options)
+  .on('exit', code => {
+    debug('exit %s', code);
+    process.exit(code);
+  });
+
