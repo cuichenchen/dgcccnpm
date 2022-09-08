@@ -1,12 +1,12 @@
 {
-  "name": "dgcccnpm",
+  "name": "dgnpm",
   "version": "0.0.1",
-  "description": "dgcccnpm: npm client for ccc",
+  "description": "dgnpm: npm client for deepglint",
   "preferGlobal": true,
   "bin": {
-    "dgcccnpm": "bin/dgcccnpm"
+    "dgnpm": "bin/dgnpm"
   },
-  "main": "bin/dgcccnpm",
+  "main": "bin/dgnpm",
   "files": [
     "bin",
     "lib"
@@ -37,16 +37,16 @@
     "eslint-config-egg": "12",
     "git-contributor": "1"
   },
-  "homepage": "https://github.com/cuichenchen/dgcccnpm",
+  "homepage": "https://github.com/cuichenchen/dgnpm",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cuichenchen/dgcccnpm.git"
+    "url": "git://github.com/cuichenchen/dgnpm.git"
   },
   "bugs": {
-    "url": "https://github.com/cuichenchen/dgcccnpm/issues"
+    "url": "https://github.com/cuichenchen/dgnpm/issues"
   },
   "keywords": [
-    "dgcccnpm",
+    "dgnpm",
     "npm",
     "npminstall"
   ],
@@ -57,9 +57,8 @@
     "node": ">= 14.0.0"
   },
   "ci": {
-    "version": "14, 16, 18",
     "license": {
-      "year": "2013",
+      "year": "2022",
       "fullname": "Chenye"
     }
   },
