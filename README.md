@@ -1,3 +1,1 @@
-forked from cnpm
-# dgnpm
-# dgnpm
+private npm for deepglint
